@@ -6,7 +6,9 @@ This is a crux project created with Better Fullstack CLI.
 
 This is a monorepo with the following structure:
 
+
 - **`apps/server/`** - Backend server (Hono)
+
 
 - **`packages/api/`** - Shared API logic and types
 - **`packages/auth/`** - Authentication logic and utilities
@@ -34,6 +36,8 @@ All database operations should be run from the server workspace:
 Database schema is located in `packages/db/prisma/schema.prisma`
 
 ## API Structure
+
+
 
 ## Project Configuration
 

@@ -28,7 +28,9 @@ export function WelcomeEmail({
         <Container style={container}>
           <Heading style={h1}>Welcome to crux!</Heading>
           <Text style={text}>Hi {username},</Text>
-          <Text style={text}>Thanks for signing up! We're excited to have you on board.</Text>
+          <Text style={text}>
+            Thanks for signing up! We're excited to have you on board.
+          </Text>
           <Section style={buttonContainer}>
             <Button style={button} href={loginUrl}>
               Get Started

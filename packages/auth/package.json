@@ -1,6 +1,5 @@
 {
   "name": "@crux/auth",
-  "type": "module",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "exports": {
@@ -11,20 +10,21 @@
       "default": "./src/*.ts"
     }
   },
+  "type": "module",
   "scripts": {
     "check-types": "tsc --noEmit"
   },
-  "dependencies": {
-    "@better-auth/prisma-adapter": "^1.6.22",
-    "@crux/db": "workspace:*",
-    "@crux/env": "workspace:*",
-    "better-auth": "catalog:",
-    "dotenv": "catalog:",
-    "stripe": "catalog:",
-    "zod": "catalog:"
-  },
   "devDependencies": {
-    "@crux/config": "workspace:*",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "@crux/config": "workspace:*"
+  },
+  "dependencies": {
+    "dotenv": "catalog:",
+    "zod": "catalog:",
+    "@crux/env": "workspace:*",
+    "@crux/db": "workspace:*",
+    "better-auth": "catalog:",
+    "@better-auth/prisma-adapter": "^1.6.22",
+    "stripe": "catalog:"
   }
 }

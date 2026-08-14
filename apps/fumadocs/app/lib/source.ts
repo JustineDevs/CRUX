@@ -1,10 +1,9 @@
-import { loader } from "fumadocs-core/source";
-import { defineDocs } from "fumadocs-mdx/macro";
-
-import { docsContentRoute, docsRoute } from "./shared";
+import { loader } from 'fumadocs-core/source';
+import { defineDocs } from 'fumadocs-mdx/macro';
+import { docsContentRoute, docsRoute } from './shared';
 
 export const docs = defineDocs({
-  dir: "content/docs",
+  dir: 'content/docs',
   docs: {
     async: true,
     postprocess: {
@@ -18,17 +17,17 @@ export const source = loader({
   baseUrl: docsRoute,
 });
 
-export function getPageMarkdownUrl(page: (typeof source)["$inferPage"]) {
-  const segments = [...page.slugs, "content.md"];
+export function getPageMarkdownUrl(page: (typeof source)['$inferPage']) {
+  const segments = [...page.slugs, 'content.md'];
 
   return {
     segments,
-    url: "/" + [page.locale, ...docsContentRoute.split("/"), ...segments].filter(Boolean).join("/"),
+    url: '/' + [page.locale, ...docsContentRoute.split('/'), ...segments].filter(Boolean).join('/'),
   };
 }
 
-export async function getLLMText(page: (typeof source)["$inferPage"]) {
-  const processed = await page.data.getText("processed");
+export async function getLLMText(page: (typeof source)['$inferPage']) {
+  const processed = await page.data.getText('processed');
 
   return `# ${page.data.title} (${page.url})
 

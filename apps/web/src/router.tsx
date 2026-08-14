@@ -1,10 +1,9 @@
-import { createBrowserRouter } from "react-router";
-
 import AppShell from "./app-shell";
-import Dashboard from "./routes/dashboard";
 import Home from "./routes/home";
+import Dashboard from "./routes/dashboard";
 import Login from "./routes/login";
 import SuccessPage from "./routes/success";
+import { createBrowserRouter } from "react-router";
 
 function NotFound() {
   return (

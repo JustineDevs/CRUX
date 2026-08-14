@@ -1,11 +1,11 @@
 {
   "name": "crux",
   "private": true,
+  "type": "module",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
-  "type": "module",
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
@@ -25,34 +25,33 @@
     "secrets:scan": "gitleaks git --redact --verbose",
     "secrets:scan:staged": "gitleaks git --pre-commit --redact --staged --verbose",
     "check": "biome check --write .",
-    "prepare": "husky",
-    "ruler:apply": "pnpm dlx @intellectronica/ruler@latest apply --local-only"
-  },
-  "dependencies": {
-    "@crux/env": "workspace:*",
-    "dotenv": "catalog:",
-    "zod": "catalog:"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.5.7",
-    "@crux/config": "workspace:*",
-    "@types/node": "catalog:",
-    "husky": "^9.1.7",
-    "knip": "^6.32.0",
-    "lint-staged": "^17.3.0",
-    "turbo": "^2.10.0",
-    "typescript": "^6.0.3",
-    "vercel": "^54.18.2"
-  },
-  "lint-staged": {
-    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
-      "biome check --write ."
-    ]
+    "prepare": "husky"
   },
   "packageManager": "pnpm@9.15.4",
   "pnpm": {
     "overrides": {
       "kysely": "0.28.17"
     }
+  },
+  "dependencies": {
+    "dotenv": "catalog:",
+    "zod": "catalog:",
+    "@crux/env": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "@types/node": "catalog:",
+    "@crux/config": "workspace:*",
+    "vercel": "^54.18.2",
+    "turbo": "^2.10.0",
+    "knip": "^6.32.0",
+    "@biomejs/biome": "^2.5.7",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.3.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+      "biome check --write ."
+    ]
   }
 }

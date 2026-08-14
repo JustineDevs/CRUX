@@ -1,5 +1,5 @@
-import { useFumadocsLoader } from "fumadocs-core/source/client";
-import { DocsLayout } from "fumadocs-ui/layouts/docs";
+import type { Route } from './+types/docs';
+import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import {
   DocsBody,
   DocsDescription,
@@ -7,20 +7,18 @@ import {
   DocsTitle,
   MarkdownCopyButton,
   ViewOptionsPopover,
-} from "fumadocs-ui/layouts/docs/page";
-import { use } from "react";
-
-import { useMDXComponents } from "@/components/mdx";
-import { baseOptions } from "@/lib/layout.shared";
-import { gitConfig, getPageImagePath } from "@/lib/shared";
-import { docs, getPageMarkdownUrl, source } from "@/lib/source";
-
-import type { Route } from "./+types/docs";
+} from 'fumadocs-ui/layouts/docs/page';
+import { docs, getPageMarkdownUrl, source } from '@/lib/source';
+import { baseOptions } from '@/lib/layout.shared';
+import { gitConfig, getPageImagePath } from '@/lib/shared';
+import { useFumadocsLoader } from 'fumadocs-core/source/client';
+import { useMDXComponents } from '@/components/mdx';
+import { use } from 'react';
 
 export async function loader({ params }: Route.LoaderArgs) {
-  const slugs = params["*"].split("/").filter((v) => v.length > 0);
+  const slugs = params['*'].split('/').filter((v) => v.length > 0);
   const page = source.getPage(slugs);
-  if (!page) throw new Response("Not found", { status: 404 });
+  if (!page) throw new Response('Not found', { status: 404 });
 
   return {
     path: page.path,

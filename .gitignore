@@ -36,6 +36,9 @@ lerna-debug.log*
 # Turbo
 .turbo
 
+# Internal Files
+.internal/
+
 # Better Fullstack
 .alchemy
 
@@ -48,18 +51,3 @@ coverage
 .cache
 tmp
 temp
-
-# START Ruler Generated Files
-/.codex/config.toml
-/.codex/config.toml.bak
-/.cursor/mcp.json
-/.cursor/mcp.json.bak
-/.mcp.json
-/.mcp.json.bak
-/AGENTS.md
-/AGENTS.md.bak
-/CLAUDE.md
-/CLAUDE.md.bak
-/opencode.json
-/opencode.json.bak
-# END Ruler Generated Files

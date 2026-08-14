@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-
 import { graphqlFetch } from "@/utils/graphql";
 
 const TITLE_TEXT = `

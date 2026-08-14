@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from "fumadocs-ui/layouts/docs/page";
-import { createRelativeLink } from "fumadocs-ui/mdx";
 import { notFound } from "next/navigation";
-
-import { getMDXComponents } from "@/components/mdx";
 import { source } from "@/lib/source";
+import { getMDXComponents } from "@/components/mdx";
+import { createRelativeLink } from "fumadocs-ui/mdx";
+import {
+  DocsBody,
+  DocsDescription,
+  DocsPage,
+  DocsTitle,
+} from "fumadocs-ui/layouts/docs/page";
 
 type DocsPageProps = {
   params: Promise<{

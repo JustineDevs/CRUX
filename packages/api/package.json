@@ -1,6 +1,5 @@
 {
   "name": "@crux/api",
-  "type": "module",
   "exports": {
     ".": {
       "default": "./src/index.ts"
@@ -9,28 +8,29 @@
       "default": "./src/*.ts"
     }
   },
+  "type": "module",
   "scripts": {
     "check-types": "tsc --noEmit",
     "test": "vitest run --passWithNoTests"
   },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "@crux/config": "workspace:*",
+    "vitest": "catalog:",
+    "@vitest/ui": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "jsdom": "catalog:"
+  },
   "dependencies": {
+    "dotenv": "catalog:",
+    "zod": "catalog:",
+    "@crux/env": "workspace:*",
     "@crux/auth": "workspace:*",
     "@crux/db": "workspace:*",
-    "@crux/env": "workspace:*",
+    "graphql-yoga": "catalog:",
+    "graphql": "catalog:",
     "@pothos/core": "catalog:",
     "better-auth": "catalog:",
-    "dotenv": "catalog:",
-    "graphql": "catalog:",
-    "graphql-yoga": "catalog:",
-    "hono": "catalog:",
-    "zod": "catalog:"
-  },
-  "devDependencies": {
-    "@crux/config": "workspace:*",
-    "@vitest/coverage-v8": "catalog:",
-    "@vitest/ui": "catalog:",
-    "jsdom": "catalog:",
-    "typescript": "^6.0.3",
-    "vitest": "catalog:"
+    "hono": "catalog:"
   }
 }

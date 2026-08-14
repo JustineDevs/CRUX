@@ -8,13 +8,13 @@
     "./web": "./src/web.ts"
   },
   "dependencies": {
-    "@t3-oss/env-core": "^0.13.11",
     "dotenv": "catalog:",
-    "zod": "catalog:"
+    "zod": "catalog:",
+    "@t3-oss/env-core": "^0.13.11"
   },
   "devDependencies": {
-    "@crux/config": "workspace:*",
+    "typescript": "^6.0.3",
     "@types/node": "catalog:",
-    "typescript": "^6.0.3"
+    "@crux/config": "workspace:*"
   }
 }

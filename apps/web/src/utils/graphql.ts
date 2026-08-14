@@ -1,5 +1,5 @@
-import { env } from "@crux/env/web";
 import { QueryClient } from "@tanstack/react-query";
+import { env } from "@crux/env/web";
 
 export const queryClient = new QueryClient({
   defaultOptions: {

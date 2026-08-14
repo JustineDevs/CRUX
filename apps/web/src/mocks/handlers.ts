@@ -29,7 +29,10 @@ export const handlers = [
       });
     }
 
-    return HttpResponse.json({ success: false, message: "Invalid credentials" }, { status: 401 });
+    return HttpResponse.json(
+      { success: false, message: "Invalid credentials" },
+      { status: 401 }
+    );
   }),
 
   // Add more handlers as needed for your API endpoints

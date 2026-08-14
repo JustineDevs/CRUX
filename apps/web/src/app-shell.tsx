@@ -1,14 +1,14 @@
-import { QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { Outlet } from "react-router";
-
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { Outlet } from "react-router";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { queryClient } from "@/utils/graphql";
 
 function RoutedLayout() {
   return (
+    
     <ThemeProvider
       attribute="class"
       defaultTheme="dark"
@@ -21,6 +21,7 @@ function RoutedLayout() {
       </div>
       <Toaster richColors />
     </ThemeProvider>
+    
   );
 }
 
