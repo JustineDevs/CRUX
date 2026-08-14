@@ -1,0 +1,4 @@
+title = "crux Gitleaks configuration"
+
+[extend]
+useDefault = true

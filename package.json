@@ -1,0 +1,58 @@
+{
+  "name": "crux",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "check-types": "turbo check-types",
+    "dev:web": "turbo -F web dev",
+    "dev:docs": "turbo -F docs dev",
+    "build:docs": "turbo -F docs build",
+    "check:docs": "turbo -F docs check-types",
+    "dev:server": "turbo -F server dev",
+    "db:push": "turbo -F @crux/db db:push",
+    "db:studio": "turbo -F @crux/db db:studio",
+    "db:generate": "turbo -F @crux/db db:generate",
+    "db:migrate": "turbo -F @crux/db db:migrate",
+    "test": "pnpm --filter web test && pnpm --filter server test && pnpm --filter @crux/api test",
+    "knip": "knip",
+    "knip:production": "knip --production",
+    "secrets:scan": "gitleaks git --redact --verbose",
+    "secrets:scan:staged": "gitleaks git --pre-commit --redact --staged --verbose",
+    "check": "biome check --write .",
+    "prepare": "husky",
+    "ruler:apply": "pnpm dlx @intellectronica/ruler@latest apply --local-only"
+  },
+  "dependencies": {
+    "@crux/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.7",
+    "@crux/config": "workspace:*",
+    "@types/node": "catalog:",
+    "husky": "^9.1.7",
+    "knip": "^6.32.0",
+    "lint-staged": "^17.3.0",
+    "turbo": "^2.10.0",
+    "typescript": "^6.0.3",
+    "vercel": "^54.18.2"
+  },
+  "lint-staged": {
+    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+      "biome check --write ."
+    ]
+  },
+  "packageManager": "pnpm@9.15.4",
+  "pnpm": {
+    "overrides": {
+      "kysely": "0.28.17"
+    }
+  }
+}

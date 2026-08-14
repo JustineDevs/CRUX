@@ -1,0 +1,25 @@
+packages:
+  - apps/*
+  - packages/*
+catalog:
+  dotenv: ^17.4.2
+  zod: ^4.4.3
+  "@types/node": ^26.2.0
+  hono: ^4.12.27
+  better-auth: ^1.6.22
+  graphql-yoga: ^5.21.2
+  graphql: ^16.11.0
+  "@pothos/core": ^4.13.1
+  stripe: ^22.4.0
+  react: ^19.2.8
+  "@types/react": ^19.2.18
+  msw: ^2.15.0
+  vitest: 4.1.8
+  "@vitest/ui": 4.1.8
+  "@vitest/coverage-v8": 4.1.8
+  jsdom: ^29.1.1
+  react-dom: ^19.2.8
+  "@prisma/client": ^7.9.1
+  "@types/react-dom": ^19.2.4
+  postcss: ^8.5.15
+  tailwindcss: ^4.3.3

@@ -1,0 +1,33 @@
+import { env } from "@crux/env/web";
+import { QueryClient } from "@tanstack/react-query";
+
+export const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 2,
+      staleTime: 1000 * 60,
+    },
+  },
+});
+
+const GRAPHQL_URL = `${env.VITE_SERVER_URL}/graphql`;
+
+export async function graphqlFetch<T = unknown>(
+  query: string,
+  variables?: Record<string, unknown>,
+): Promise<T> {
+  const response = await fetch(GRAPHQL_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    body: JSON.stringify({ query, variables }),
+  });
+
+  const json = await response.json();
+
+  if (json.errors) {
+    throw new Error(json.errors.map((e: { message: string }) => e.message).join(", "));
+  }
+
+  return json.data as T;
+}

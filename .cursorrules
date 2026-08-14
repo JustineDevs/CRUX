@@ -1,0 +1,17 @@
+# Project: crux
+# Ecosystem: Typescript
+
+You are working on a TypeScript project.
+Runtime: node
+Package manager: pnpm
+Frontend: react-vite
+Backend: hono
+Database: postgres with prisma
+API: graphql-yoga
+Auth: better-auth-organizations
+Testing: vitest
+Validation: zod
+
+Follow existing code patterns and conventions.
+Use the established project structure.
+Keep this file updated when the project structure changes.

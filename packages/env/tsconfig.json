@@ -1,0 +1,3 @@
+{
+  "extends": "@crux/config/tsconfig.base.json"
+}
