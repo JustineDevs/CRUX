@@ -5,7 +5,8 @@
 > [!IMPORTANT]
 > Eliminating AI design slop through deterministic, multi-registry indexing and zero-friction layout streaming.
 CRUX MCP **(Component Registry eXchange)** is an open-source, Model Context Protocol (MCP). It acts as an open federation bridge that sits between your AI agent (Cursor, Windsurf, Claude Code) and a network of premium UI component registries (Shadcn, MagicUI, Aceternity, DaisyUI, KokonutUI). Instead of letting AI tools guess layout math—which frequently outputs predictive gradients and uninspired flex containers—CRUX empowers LLMs to fetch 1:1 accurate component code snippets, package dependencies, and setup prerequisites directly into your workspace.
-> [WARNING]
+
+> [!WARNING]
 > This Project Under-development and not recommend to be use as of now. 
 > State: Technical Documentation and System Designing
 ------------------------------
